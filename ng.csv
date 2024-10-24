@@ -1,0 +1,22 @@
+STRUCTURE,STRUCTURE_ID,STRUCTURE_NAME,ACTION,VAR,Variable,UNIT,Measure,COU,Country,TIME_PERIOD,Year,OBS_VALUE,Observation Value,OBS_STATUS
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,HEDUNUGR,Nursing graduates,NOMBRENB,Number,JPN,Japan,2022,,65590,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,HEDUNUGR,Nursing graduates,NOMBRENB,Number,JPN,Japan,2021,,66195,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,HEDUNUGR,Nursing graduates,NOMBRENB,Number,KOR,Korea,2021,,54429,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,HEDUNUGR,Nursing graduates,NOMBRENB,Number,NZL,New Zealand,2021,,2210,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,HEDUNUGR,Nursing graduates,NOMBRENB,Number,USA,United States,2021,,220841,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,HEDUNUGR,Nursing graduates,NOMBRENB,Number,JPN,Japan,2018,,66328,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,HEDUNUGR,Nursing graduates,NOMBRENB,Number,KOR,Korea,2018,,53107,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,HEDUNUGR,Nursing graduates,NOMBRENB,Number,NZL,New Zealand,2018,,2084,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,HEDUNUGR,Nursing graduates,NOMBRENB,Number,USA,United States,2018,,206420,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,HEDUNUGR,Nursing graduates,NOMBRENB,Number,JPN,Japan,2020,,66243,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,HEDUNUGR,Nursing graduates,NOMBRENB,Number,KOR,Korea,2020,,54124,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,HEDUNUGR,Nursing graduates,NOMBRENB,Number,NZL,New Zealand,2020,,2082,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,HEDUNUGR,Nursing graduates,NOMBRENB,Number,USA,United States,2020,,216045,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,HEDUNUGR,Nursing graduates,NOMBRENB,Number,JPN,Japan,2019,,65920,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,HEDUNUGR,Nursing graduates,NOMBRENB,Number,KOR,Korea,2019,,51848,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,HEDUNUGR,Nursing graduates,NOMBRENB,Number,NZL,New Zealand,2019,,1985,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,HEDUNUGR,Nursing graduates,NOMBRENB,Number,USA,United States,2019,,215234,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,HEDUNUGR,Nursing graduates,NOMBRENB,Number,MEX,Mexico,2018,,19850,,D
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,HEDUNUGR,Nursing graduates,NOMBRENB,Number,MEX,Mexico,2019,,22129,,D
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,HEDUNUGR,Nursing graduates,NOMBRENB,Number,MEX,Mexico,2020,,19831,,D
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,HEDUNUGR,Nursing graduates,NOMBRENB,Number,MEX,Mexico,2021,,21987,,D

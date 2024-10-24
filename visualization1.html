@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualization 1 - Nursing Graduate Scatter Plot Chart</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        .tooltip {
+            position: absolute;
+            background-color: white;
+            padding: 8px;
+            border: 1px solid black;
+            border-radius: 8px;
+            pointer-events: none;
+            opacity: 0;
+            font-size: 12px;
+        }
+
+        .dot {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .dot:hover {
+            transform: scale(1.1);
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .dropdown {
+            margin-bottom: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>Visualization 1 - Nursing Graduate Scatter Plot Chart</h1>
+    </header>
+
+
+    <div id="chart"></div>
+    <div id="tooltip" class="tooltip"></div>
+
+    <script src="visualization1.js"></script>
+
+    <footer>
+        <p>© 2024 Data Visualisation Project</p>
+    </footer>
+</body>
+</html>
