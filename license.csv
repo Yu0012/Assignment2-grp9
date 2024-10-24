@@ -1,0 +1,23 @@
+﻿STRUCTURE,STRUCTURE_ID,STRUCTURE_NAME,ACTION,VAR,Variable,UNIT,Measure,COU,Country,TIME_PERIOD,Year,OBS_VALUE,Observation Value,OBS_STATUS
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,MINULPPN,"Professional nurses, licensed to practice",PERSMYNB,Number of persons (head counts),ITA,Italy,2022,,455204,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,MINULPPN,"Professional nurses, licensed to practice",PERSMYNB,Number of persons (head counts),NZL,New Zealand,2022,,63041,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,MINULPPN,"Professional nurses, licensed to practice",PERSMYNB,Number of persons (head counts),USA,United States,2022,,5312222,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,MINULPPN,"Professional nurses, licensed to practice",PERSMYNB,Number of persons (head counts),ITA,Italy,2021,,455090,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,MINULPPN,"Professional nurses, licensed to practice",PERSMYNB,Number of persons (head counts),KOR,Korea,2021,,457849,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,MINULPPN,"Professional nurses, licensed to practice",PERSMYNB,Number of persons (head counts),NZL,New Zealand,2021,,59908,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,MINULPPN,"Professional nurses, licensed to practice",PERSMYNB,Number of persons (head counts),USA,United States,2021,,5074530,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,MINULPPN,"Professional nurses, licensed to practice",PERSMYNB,Number of persons (head counts),DNK,Denmark,2018,,107686,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,MINULPPN,"Professional nurses, licensed to practice",PERSMYNB,Number of persons (head counts),ITA,Italy,2018,,449781,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,MINULPPN,"Professional nurses, licensed to practice",PERSMYNB,Number of persons (head counts),KOR,Korea,2018,,394627,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,MINULPPN,"Professional nurses, licensed to practice",PERSMYNB,Number of persons (head counts),NZL,New Zealand,2018,,53807,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,MINULPPN,"Professional nurses, licensed to practice",PERSMYNB,Number of persons (head counts),USA,United States,2018,,4692502,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,MINULPPN,"Professional nurses, licensed to practice",PERSMYNB,Number of persons (head counts),DNK,Denmark,2020,,111016,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,MINULPPN,"Professional nurses, licensed to practice",PERSMYNB,Number of persons (head counts),ITA,Italy,2020,,454311,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,MINULPPN,"Professional nurses, licensed to practice",PERSMYNB,Number of persons (head counts),KOR,Korea,2020,,436340,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,MINULPPN,"Professional nurses, licensed to practice",PERSMYNB,Number of persons (head counts),NZL,New Zealand,2020,,57410,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,MINULPPN,"Professional nurses, licensed to practice",PERSMYNB,Number of persons (head counts),USA,United States,2020,,4975369,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,MINULPPN,"Professional nurses, licensed to practice",PERSMYNB,Number of persons (head counts),DNK,Denmark,2019,,109357,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,MINULPPN,"Professional nurses, licensed to practice",PERSMYNB,Number of persons (head counts),ITA,Italy,2019,,449571,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,MINULPPN,"Professional nurses, licensed to practice",PERSMYNB,Number of persons (head counts),KOR,Korea,2019,,414983,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,MINULPPN,"Professional nurses, licensed to practice",PERSMYNB,Number of persons (head counts),NZL,New Zealand,2019,,55343,,A
+DATAFLOW,OECD:DF_HEALTH_REAC(1.0),Healthcare Resources,I,MINULPPN,"Professional nurses, licensed to practice",PERSMYNB,Number of persons (head counts),USA,United States,2019,,4800038,,A
