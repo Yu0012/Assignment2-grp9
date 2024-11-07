@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualization 3 - Professional Nursing Heatmap Chart</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #ff9966;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes full height */
+    align-items: center; /* Center the content */
+}
+
+h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 0.5rem;
+    width: 100%; /* Full width header */
+    position: fixed; /* Fix header at the top */
+    top: 0; /* Position at the top */
+    z-index: 1000; /* Stay above other content */
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Add some padding */
+}
+
+header nav h1 {
+    font-size: 1rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    color: #ff6f61;
+}
+
+.chart-container {
+    display: flex; /* Enable flexbox layout */
+    align-items: flex-start; /* Align items to the top */
+    margin: 20px 0; /* Margin above and below the container */
+    width: 80%; /* Adjust width of the container */
+    max-width: 1200px; /* Maximum width of the container */
+}
+
+#chart {
+    flex: 1; /* Allow the chart to grow */
+    margin-right: 20px; /* Space between chart and info box */
+}
+
+.info-box {
+    width: 500px; /* Fixed width for the info box */
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid #333;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center; /* Center align text */
+    position: relative; /* For positioning */
+    z-index: 1; /* Ensure it appears above the chart */
+}
+.tooltip {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    pointer-events: none;
+    opacity: 0;
+    font-size: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+  
+.button-container {
+    display: flex; /* Enable flexbox for button alignment */
+    justify-content: center; /* Center buttons in the container */
+    margin: 20px 0; /* Space above and below the buttons */
+    padding: 20px; /* Padding around the container */
+    border-radius: 8px; /* Rounded corners */
+  }
+  
+  .button {
+    display: block; /* Display as a block element */
+    padding: 10px 15px; /* Padding inside the button */
+    background: #333; /* Button background color */
+    color: #fff; /* Button text color */
+    text-decoration: none; /* Remove underline from link */
+    border-radius: 5px; /* Rounded corners for buttons */
+    transition: background 0.3s; /* Smooth background transition */
+    margin: 0 5px; /* Add horizontal margin to create space between buttons */
+  }
+  
+  /* Remove margin for the first and last button */
+  .button:first-child {
+    margin-left: 0; /* No left margin for the first button */
+  }
+  
+  .button:last-child {
+    margin-right: 0; /* No right margin for the last button */
+  }
+  
+  .button:hover {
+    background: #ff6f61; /* Change background on hover */
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: flex-start; /* Align items to the top */
+    padding-top: 60px; /* Space for fixed header */
+    flex-grow: 1; /* Allow main to grow */
+}
+  
+  .text-box {
+    background-color: white; /* Black background for the box */
+    border: 5px solid black; /* Wheat border around the box */
+    border-radius: 10px; /* Rounded corners */
+    line-height: 1.6; /* Line height for readability */
+    color: black;
+    font-size: 1rem; /* Slightly smaller font size */
+    width: 80%; /* Smaller width (80% of the container) */
+    padding: 10px; /* Smaller padding around text */
+    margin: 0 auto; /* Center the box */
+  } 
+
+footer {
+ 
+    left: 0; /* Align it to the left */
+    bottom: 0; /* Position it at the bottom */
+    width: 100%; /* Full width */
+    text-align: center; /* Center the text */
+    padding: 1rem; /* Add some padding */
+    background: #333; /* Footer background color */
+    color: #fff; /* Footer text color */
+    font-size: 0.9rem; /* Font size */
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h2>HEALTH CARE RESOURCE-NURSING</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="visualizations.html">Visualization</a></li>
+                <li><a href="about.html">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+<br>
+
+<main>
+    <div class="button-container">
+        <a href="donut.html" class="button">Donut Chart For Total Practicing Nursing</a>
+        <a href="scatter.html" class="button">Scatter Chart For Nursing Graduates</a>
+        <a href="heatmap.html" class="button">HeatMap Chart For Professional Nursing</a>
+        <a href="license.html" class="button">Country Licenses Bar Chart</a>
+        <a href="map.html" class="button">Map for Total Professional Nursing</a>
+    </div>
+
+    <div class="chart-container"> <!-- New container for chart and info box -->
+        <div id="chart"></div>
+        <div class="info-box">
+            <h3>Professional Nursing Heatmap</h3>
+            <div id="year-name">Year: </div>
+            <div id="country-name">Country: </div>
+            <div id="value-name">Value: </div>
+        </div>
+    </div>
+    <div id="tooltip" class="tooltip"></div>
+    <div class="text-box">
+        <p>The dataset presents the number of professional nurses across five countries—New Zealand, the United States, Denmark, Japan, and Australia—over a five-year period from 2018 to 2022. Notably, the United States consistently has the highest number of nurses, peaking at approximately 4 million in 2022. New Zealand shows a steady increase from about 54,512 in 2019 to 62,162 in 2022, indicating a growing emphasis on healthcare resources. Denmark’s numbers fluctuate slightly, with a high of 66,365 in 2018 and 67,830 in 2020, while Japan remains stable with around 1.57 million nurses in 2018 and 1.62 million in 2020. Australia shows gradual growth in nurse numbers, reaching 361,332 in 2021. The heatmap chart will visually represent these trends, allowing for an immediate comparison of nursing resources across countries and years, highlighting areas with higher nurse availability and potential gaps in healthcare staffing. This visualization will provide valuable insights into the distribution of nursing professionals and assist in understanding the impact of these numbers on health outcomes and services in each country.</p>
+    </div>
+</main>
+
+    
+<br>
+<br>
+<br>
+
+    <footer>
+        <p>2024 Data Visualization Project | Created by Group 9</p>
+      </footer>
+
+    <script src="heatmap.js"></script>
+</body>
+</html>

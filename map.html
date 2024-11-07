@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Map with Info and Tooltip</title>
+    <style>
+        /* Style for the map container */
+        .map-container {
+            width: 80%; /* Adjust width to your preference */
+            max-width: 800px; /* Optional: maximum width */
+            height: 400px;
+            margin: auto;
+            border: 2px solid #333;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            display: flex;
+            justify-content: center;
+            background-color: #fff;
+        }
+        /* Positioning info box closer to the map */
+        .info-box {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px;
+            background: #FFEEDD;
+            border: 1px solid #333;
+            border-radius: 4px;
+            width: 180px;
+            font-size: 14px;
+        }
+
+        /* Style for the tooltip */
+        .tooltip {
+            position: absolute;
+            padding: 5px;
+            background: white;
+            border: 1px solid #333;
+            border-radius: 4px;
+            pointer-events: none;
+            opacity: 0; /* Hidden by default */
+            font-size: 12px;
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+        body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #ff9966;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes full height */
+    align-items: center; /* Center the content */
+}
+
+h2 {
+    font-size: 2rem;
+    font-style: oblique;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #060606;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 0.5rem;
+    width: 100%; /* Full width header */
+    position: fixed; /* Fix header at the top */
+    top: 0; /* Position at the top */
+    z-index: 1000; /* Stay above other content */
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Add some padding */
+}
+
+header nav h1 {
+    font-size: 1rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    color: #ff6f61;
+}
+
+
+
+
+
+.info-box {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px;
+            background: #FFEEDD;
+            border: 1px solid #333;
+            border-radius: 4px;
+            width: 180px;
+            font-size: 14px;
+        }
+.tooltip {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    pointer-events: none;
+    opacity: 0;
+    font-size: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+  
+.button-container {
+    display: flex; /* Enable flexbox for button alignment */
+    justify-content: center; /* Center buttons in the container */
+    margin: 20px 0; /* Space above and below the buttons */
+    padding: 20px; /* Padding around the container */
+    border-radius: 8px; /* Rounded corners */
+  }
+  
+  .button {
+    display: block; /* Display as a block element */
+    padding: 10px 15px; /* Padding inside the button */
+    background: #333; /* Button background color */
+    color: #fff; /* Button text color */
+    text-decoration: none; /* Remove underline from link */
+    border-radius: 5px; /* Rounded corners for buttons */
+    transition: background 0.3s; /* Smooth background transition */
+    margin: 0 5px; /* Add horizontal margin to create space between buttons */
+  }
+  
+  /* Remove margin for the first and last button */
+  .button:first-child {
+    margin-left: 0; /* No left margin for the first button */
+  }
+  
+  .button:last-child {
+    margin-right: 0; /* No right margin for the last button */
+  }
+  
+  .button:hover {
+    background: #ff6f61; /* Change background on hover */
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: flex-start; /* Align items to the top */
+    padding-top: 60px; /* Space for fixed header */
+    flex-grow: 1; /* Allow main to grow */
+}
+.text-box {
+    border: 2px solid black; /* Black border */
+    background-color: white; /* White background */
+    padding: 15px; /* Padding inside the box */
+    border-radius: 8px; /* Rounded corners */
+    margin: 20px; /* Space around the box */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Optional shadow for effect */
+    font-size: 14px; /* Font size */
+    line-height: 1.6; /* Line height for readability */
+}
+
+  
+
+
+footer {
+   
+    left: 0;
+    bottom: 0;
+    width: 100%; /* Full width */
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for effect */
+    z-index: 1000;
+}
+
+    </style>
+</head>
+<header>
+    <nav>
+      <h1>HEALTH CARE RESOURCE-NURSING</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="visualizations.html">Visualizations</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="button-container">
+        <a href="donut.html" class="button">Donut Chart For Total Practicing Nursing</a>
+        <a href="scatter.html" class="button">Scatter Chart For Nursing Graduates</a>
+        <a href="heatmap.html" class="button">HeatMap Chart For Professional Nursing</a>
+        <a href="license.html" class="button">Country Licenses Bar Chart</a>
+        <a href="map.html" class="button">Map for Total Professional Nursing</a>
+    </div>
+<body>
+    <h2>Map for Total Professional Nursing</h2>
+    <div class="map-container">
+        <div id="map"></div>
+        
+        <!-- Info box for country details, positioned closer to the map -->
+        <div class="info-box">
+            <h3>Total Professional Nursing Heatmap</h3>
+            <div id="country-name">Country: </div>
+            <div id="value-name">Value: </div>
+        </div>
+    </div>
+
+    <!-- Tooltip element for hover information -->
+    <div class="tooltip" id="tooltip"></div>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="map.js"></script>
+    <br>
+    <p class="text-box">The dataset under review consists of values associated with a specific metric for 36 countries spanning the years 2018 to 2022. This dataset totals 12,730,604, highlighting the cumulative measurement across these countries. The values vary significantly, reflecting diverse circumstances and conditions across different regions. The mean value calculated from this dataset is approximately 353,018.44, which serves as an indicator of the average metric value per country. The median value is around 287,467.5, providing further insight into the distribution and suggesting that half of the countries fall below this figure and half above, indicating a relatively balanced distribution when considering extreme values.
+
+        Within the dataset, the minimum recorded value is 6,783 for Iceland, while the maximum value reaches 8,112,228 for the United States of America. This disparity results in a range of 8,115,445, underscoring significant differences in the metric being measured. Such a wide range suggests varying levels of resources, populations, or other relevant factors impacting the metric across these countries. Notably, countries like Germany and France also exhibit high values, with 2,093,000 and 1,156,359 respectively, indicating substantial metrics that may warrant further exploration into their underlying causes and implications.
+        
+        To effectively visualize this data and facilitate comparative analysis, a map chart will be created using a powerful visualization library like D3.js. This map will employ a gradient color scale to represent the values associated with each country, with lighter shades signifying lower values and darker shades indicating higher values. This color scheme will allow viewers to quickly grasp the distribution and intensity of the metric across the geographical landscape.
+        
+        In addition to the color gradient, interactive tooltips will enhance the user experience by displaying the country name alongside its corresponding value when users hover over specific regions on the map. This feature will provide immediate context and facilitate a deeper understanding of the data. Furthermore, a legend will be incorporated to delineate the value ranges associated with each color, helping users interpret the visual representation accurately.
+        
+        The title of the visualization will clearly state the nature of the data, such as "Distribution of [Metric] Across Countries (2018-2022)," ensuring that viewers can easily understand the context of the information presented. Overall, this detailed approach to data visualization will not only highlight the disparities in the metric across countries but also serve as a valuable tool for analysis, discussion, and informed decision-making regarding the metric's implications on global scales.</p>
+    <br>
+    <footer>
+        <p>2024 Data Visualization Project | Created by Group 9</p>
+      </footer>
+
+</body>
+</html>

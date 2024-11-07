@@ -1,0 +1,86 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #ff9966; /* Light background for contrast */
+    color: #333; /* Dark text for readability */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Make body cover full height of the viewport */
+  }
+  
+  header {
+    background: #333;
+    color: #fff;
+    padding: 0.5rem;
+}
+  
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+header nav h1 {
+    font-size: 1rem;
+}
+  
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+  
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+  
+header nav ul li a:hover {
+    color: #ff6f61;
+}
+  
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  
+  
+  main {
+    flex: 1; /* Allow main to grow and take remaining space */
+    padding: 20px;
+  }
+  
+  .about {
+    background: white; /* White background for the about section */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 800px; /* Set a max width for readability */
+    margin: auto; /* Center the about section */
+    color: black;
+    border: 5px solid black; /* Wheat border around the box */
+    border-radius: 10px; /* Rounded corners */
+    line-height: 1.6; /* Line height for readability */
+  }
+  
+  .about h2 {
+    color: black; /* Match the header color */
+  }
+  
+  .info-container {
+    margin-top: 20px; /* Space above the info container */
+  }
+
+  footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: black; /* Same color as header */
+    color: white;
+  }
+  

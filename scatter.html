@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nursing Resources Visualization</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Link to Chart.js -->
+    <style>
+      /* General Styles */
+    body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6; /* Improve readability with increased line-height */
+    margin: 0;
+    padding: 0;
+    background-color: #ff9966; /* Light background for contrast */
+    color: #fff; /* Set default text color to white */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Make body cover full height of the viewport */
+}
+h2 {
+    font-size: 1.5rem; /* Increase the font size */
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Add space below the heading */
+    color: #fff; /* Optional: Change color to white for better contrast */
+}
+
+/* Header Styles */
+header {
+    background: #333;
+    color: #fff; /* Ensure header text is white */
+    padding: 0.5rem;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav h1 {
+    font-size: 1rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+header nav ul li a {
+    color: #fff; /* Link color */
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    color: #ff6f61; /* Hover color */
+}
+
+
+
+
+
+/* Canvas Styles */
+canvas {
+    display: block;
+    margin: 0 auto;
+    border: 3px solid black; /* Border around the chart */
+    background-color: wheat; /* Background color for the chart area */
+    max-width: 100%; /* Allow the canvas to scale with smaller screens */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+
+
+
+.button-container {
+    display: flex; /* Enable flexbox for button alignment */
+    justify-content: center; /* Center buttons in the container */
+    margin: 20px 0; /* Space above and below the buttons */
+    padding: 20px; /* Padding around the container */
+    border-radius: 8px; /* Rounded corners */
+  }
+  
+  .button {
+    display: block; /* Display as a block element */
+    padding: 10px 15px; /* Padding inside the button */
+    background: #333; /* Button background color */
+    color: #fff; /* Button text color */
+    text-decoration: none; /* Remove underline from link */
+    border-radius: 5px; /* Rounded corners for buttons */
+    transition: background 0.3s; /* Smooth background transition */
+    margin: 0 5px; /* Add horizontal margin to create space between buttons */
+  }
+  
+  /* Remove margin for the first and last button */
+  .button:first-child {
+    margin-left: 0; /* No left margin for the first button */
+  }
+  
+  .button:last-child {
+    margin-right: 0; /* No right margin for the last button */
+  }
+  
+  .button:hover {
+    background: #ff6f61; /* Change background on hover */
+  }
+  
+  p {
+    background-color: white; /* Black background for the box */
+    border: 5px solid black; /* Wheat border around the box */
+    border-radius: 10px; /* Rounded corners */
+    line-height: 1.6; /* Line height for readability */
+    color: black;
+    font-size: 1rem; /* Slightly smaller font size */
+    width: 80%; /* Smaller width (80% of the container) */
+    padding: 10px; /* Smaller padding around text */
+    margin: 0 auto; /* Center the box */
+  }
+  
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: black; /* Same color as header */
+    /* color: wite; Footer text color */
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h2>HEALTH CARE RESOURCE-NURSING</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="visualizations.html">Visualization</a></li>
+                <li><a href="about.html">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+      <div class="button-container">
+        <a href="donut.html" class="button">Donut Chart For Total Practicing Nursing </a>
+        <a href="scatter.html" class="button">Scatter Chart For Nursing Graduates</a>
+        <a href="heatmap.html" class="button"> HeatMap Chart For Professional Nursing</a>
+        <a href="license.html" class="button">Country Licenses Bar Chart</a>
+        <a href="map.html" class="button">Map for Total Professional Nursing</a>
+      </div>
+        
+        <div class="programming-stats">
+            <canvas id="nursingChart" width="800" height="400" class="my-chart"></canvas>
+        </div>
+        
+        <br>
+        <br>
+        <p>The data provided represents the number of nursing graduates across various countries (Japan, Korea, New Zealand, United States, and Mexico) from 2018 to 2022. This dataset offers insight into the annual output of nursing professionals, which is crucial for understanding each country's efforts in replenishing and expanding its healthcare workforce. Observing trends over time, Japan consistently reports high numbers of nursing graduates, peaking at 66,328 in 2018 before experiencing minor fluctuations, ending at 65,590 in 2022. The United States also maintains a high graduation rate, reaching 220,841 by 2021, indicating a steady commitment to bolstering its nursing workforce.
+
+          Meanwhile, Korea shows a gradual increase in nursing graduates, climbing from 51,107 in 2018 to 54,429 in 2021, reflecting a positive trend in workforce development. Mexico, although having smaller numbers in comparison, shows variability, with a peak in 2019 at 22,129 before slightly decreasing. New Zealand's figures remain relatively low but stable, highlighting its smaller population size and healthcare system demand.
+          
+          A scatter plot visualization of this data would effectively display the distribution and trends of nursing graduates across countries and years, allowing for quick comparisons and revealing potential correlations between education output and healthcare workforce needs. The scatter plot can also illustrate each country's response to the growing demand for healthcare professionals, particularly in light of increasing healthcare challenges globally.</p>
+       
+    </main>
+    <br>
+    <footer>
+      <p1>2024 Data Visualization Project | Created by Group 9</p1>
+    </footer>
+    
+    <script src="scatter.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>

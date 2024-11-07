@@ -1,0 +1,124 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif; /* Updated font */
+  line-height: 1.6;
+  color: #333;
+  background: #ff9966; /* Light grey background */
+}
+
+/* Header */
+header {
+  background: #333; /* Dark background for header */
+  color: #fff; /* White text */
+  padding: 1rem; /* Padding around header */
+}
+
+header nav {
+  display: flex; /* Flexbox for navigation */
+  justify-content: space-between; /* Space out elements */
+  align-items: center; /* Center items vertically */
+}
+
+header nav h2 {
+  font-size: 1.8rem; /* Larger font for the header */
+}
+
+header nav ul {
+  list-style: none; /* Remove bullet points */
+  display: flex; /* Flexbox for horizontal list */
+  gap: 1.5rem; /* Space between list items */
+}
+
+header nav ul li a {
+  color: #fff; /* White text for links */
+  text-decoration: none; /* Remove underline */
+}
+
+header nav ul li a:hover {
+  color: #ff6f61; /* Change color on hover */
+}
+
+/* Main Content */
+main {
+  padding: 2rem; /* Add padding around main content */
+}
+
+/* Data Visualizations Section */
+.visualizations {
+  background-color: black; /* Black background for the section */
+  color:  #ff9966; /* White text color */
+  padding: 5px; /* Padding inside the section */
+  border-radius: 8px; /* Rounded corners */
+  margin: 10px 0; /* Space above and below the section */
+  
+}
+
+.visualizations h2 {
+  font-size: 2rem; /* Font size for section heading */
+  margin-bottom: 1rem; /* Space below heading */
+  text-align: center; /* Center the text */
+}
+
+.visualizations p {
+  background-color: white; /* White background for the box */
+ 
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Space between the text and the border */
+  
+  margin: 20px 0; /* Space above and below the box */
+  line-height: 1.6; /* Line height for readability */
+  color: black;
+  font-size: 1.1rem;
+}
+
+
+
+
+.button-container {
+  display: flex; /* Enable flexbox for button alignment */
+  justify-content: center; /* Center buttons in the container */
+  margin: 20px 0; /* Space above and below the buttons */
+  padding: 20px; /* Padding around the container */
+  border-radius: 8px; /* Rounded corners */
+}
+
+.button {
+  display: block; /* Display as a block element */
+  padding: 10px 15px; /* Padding inside the button */
+  background: #333; /* Button background color */
+  color: #fff; /* Button text color */
+  text-decoration: none; /* Remove underline from link */
+  border-radius: 5px; /* Rounded corners for buttons */
+  transition: background 0.3s; /* Smooth background transition */
+  margin: 0 5px; /* Add horizontal margin to create space between buttons */
+}
+
+/* Remove margin for the first and last button */
+.button:first-child {
+  margin-left: 0; /* No left margin for the first button */
+}
+
+.button:last-child {
+  margin-right: 0; /* No right margin for the last button */
+}
+
+.button:hover {
+  background: #ff6f61; /* Change background on hover */
+}
+
+
+
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #333;
+  color: #fff;
+  font-size: 0.9rem;
+}
