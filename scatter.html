@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nursing Resources Visualization</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Link to Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
     <style>
       /* General Styles */
     body {
@@ -119,7 +121,7 @@ canvas {
     margin: 0 auto; /* Center the box */
   }
   
-
+  
 /* Footer styling */
 footer {
     text-align: center;
@@ -136,7 +138,7 @@ footer {
             <h2>HEALTH CARE RESOURCE-NURSING</h2>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="visualizations.html">Visualization</a></li>
+                <li><a href="donut.html">Visualization</a></li>
                 <li><a href="about.html">About us</a></li>
             </ul>
         </nav>
@@ -150,10 +152,13 @@ footer {
         <a href="license.html" class="button">Country Licenses Bar Chart</a>
         <a href="map.html" class="button">Map for Total Professional Nursing</a>
       </div>
+
+    
         
         <div class="programming-stats">
             <canvas id="nursingChart" width="800" height="400" class="my-chart"></canvas>
         </div>
+       
         
         <br>
         <br>

@@ -31,6 +31,41 @@ h1 {
     margin-bottom: 20px;
 }
 
+.year-selection {
+  font-family: Arial, sans-serif;
+  margin: 10px;
+}
+
+.year-selection label {
+  font-size: 16px;
+  color: #000000; /* White color for the label */
+  margin-right: 10px;
+}
+
+/* Style the dropdown (select element) */
+#year {
+  background-color: black; /* Black background for the select dropdown */
+  color: white; /* White text for the dropdown */
+  border: 1px solid #fff; /* White border */
+  padding: 8px 12px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style for the options inside the dropdown */
+#year option {
+  background-color: black; /* Black background for the options */
+  color: white; /* White text for the options */
+  padding: 10px;
+}
+
+/* Optional: Add hover effect for options */
+#year option:hover {
+  background-color: #444; /* Dark gray background when hovering */
+}
+
 
 
 li1 {

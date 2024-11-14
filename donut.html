@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +6,6 @@
     <title>Practicing Nursing Donut Chart</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="donut.css"> <!-- Your CSS file, if any -->
-   
 </head>
 
 <body>
@@ -15,46 +13,74 @@
         <nav>
           <h2>HEALTH CARE RESOURCE - NURSING</h2>
           <ul>
-            <li1><a href="index.html">Home</a></li1>
-            <li1><a href="visualizations.html">Visualizations</a></li1>
-            <li1><a href="about.html">About</a></li1>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="donut.html">Visualizations</a></li>
+            <li><a href="about.html">About</a></li>
           </ul>
         </nav>
-      </header>
-      <br>
-      <main>
-          <!-- Button Section -->
-    <div class="button-container">
-        <a href="donut.html" class="button">Donut Chart For Total Practicing Nursing </a>
-        <a href="scatter.html" class="button">Scatter Chart For Nursing Graduates</a>
-        <a href="heatmap.html" class="button"> HeatMap Chart For Professional Nursing</a>
-        <a href="license.html" class="button">Country Licenses Bar Chart</a>
-        <a href="map.html" class="button">Map for Total Professional Nursing</a>
-      </div>
-    
-    <div class="programming-stats">
-        <h1>Total Practicing Nursing Donut Chart from 2019-2022</h1> <!-- Title added here -->
-        <canvas class="my-chart"></canvas>
-        <div class="details">
-            <ul>
-                <!-- List items can be added here if needed -->
-            </ul>
-        </div>
-    </div>
+    </header>
     <br>
-    <script src="donut.js"></script>
-<p>
-    The dataset provided shows the total number of practicing nurses across various countries (New Zealand, United States, Canada, Denmark, and Japan) over a span of years from 2018 to 2022. This data is essential for understanding healthcare resources over time and reveals trends in nursing capacity within each country. From 2018 to 2022, the United States consistently reports the highest number of practicing nurses, with an upward trend reaching over 4 million by 2022. Canada follows with steady growth, peaking at 427,390 nurses in 2021 before seeing a slight decline in 2022. Japan also shows a consistent rise, reaching 1,621,095 by 2020. In contrast, smaller countries like Denmark and New Zealand exhibit more modest totals but show gradual increases over time. New Zealand's count of nurses, for instance, increases each year, reaching 62,162 by 2022, reflecting a growth in its healthcare workforce.
-    
-    A donut chart visualization of this data would provide a clear comparative view of the share of practicing nurses by country in a single year or over the full range. Such a visual could reveal disparities in nurse availability, which may correlate with each country's population size, healthcare funding, and demands on the healthcare system. Analyzing these patterns can inform decisions on resource allocation and workforce planning in response to healthcare needs.</p>
-    
-  
+    <main>
+        <!-- Button Section -->
+        <div class="button-container">
+            <a href="donut.html" class="button">Donut Chart For Total Practicing Nursing </a>
+            <a href="scatter.html" class="button">Scatter Chart For Nursing Graduates</a>
+            <a href="heatmap.html" class="button"> HeatMap Chart For Professional Nursing</a>
+            <a href="license.html" class="button">Country Licenses Bar Chart</a>
+            <a href="map.html" class="button">Map for Total Professional Nursing</a>
+        </div>
+        
+        <div class="programming-stats">
+            <h1>Practicing Nursing Donut Chart from 2018-2022</h1>
+            <canvas class="my-chart"></canvas>
+            <div class="details">
+              <div class="year-selection">
+                <label for="year">Select Year:</label>
+                <select id="year">
+                    <option value="2018">2018</option>
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="Total">Total</option>
+                </select>
+            </div>
+                
+                <ul>
+                    <!-- List items can be added here if needed -->
+                </ul>
+            </div>
+        </div>
+        <br>
 
-</main>
-<br>
-  <footer>
-     2024 Data Visualization Project | Created by Group 9
-  </footer>
-  
+        <p id="description" style="display:none;">
+            The dataset provided shows the total number of practicing nurses across various countries (New Zealand, United States, Canada, Denmark, and Japan) over a span of years from 2018 to 2022. This data is essential for understanding healthcare resources over time and reveals trends in nursing capacity within each country. From 2018 to 2022, the United States consistently reports the highest number of practicing nurses, with an upward trend reaching over 4 million by 2022. Canada follows with steady growth, peaking at 427,390 nurses in 2021 before seeing a slight decline in 2022. Japan also shows a consistent rise, reaching 1,621,095 by 2020. In contrast, smaller countries like Denmark and New Zealand exhibit more modest totals but show gradual increases over time. New Zealand's count of nurses, for instance, increases each year, reaching 62,162 by 2022, reflecting a growth in its healthcare workforce.
+
+            A donut chart visualization of this data would provide a clear comparative view of the share of practicing nurses by country in a single year or over the full range. Such a visual could reveal disparities in nurse availability, which may correlate with each country's population size, healthcare funding, and demands on the healthcare system. Analyzing these patterns can inform decisions on resource allocation and workforce planning in response to healthcare needs.
+        </p>
+
+        <!-- Year-wise Descriptions (hidden by default) -->
+        <p id="d1" style="display: none;">
+            In 2018, various countries reported notable nurse-to-patient ratios. Canada recorded a value of 402,895, reflecting its healthcare workforce in that year. Denmark's ratio stood at 66,365, indicating a different scale of nurse availability compared to other nations. Japan had the highest value among the listed countries, with 1,576,040, signifying a large healthcare workforce in relation to its population size. New Zealand reported a value of 53,595, highlighting its nursing resources for patient care. The United States, with a significant healthcare infrastructure, reported a value of 3,883,070, illustrating the size of its nurse workforce in relation to its population during that year.
+        </p>
+        <p id="d2" style="display: none;">
+            In 2019, Canada had a nurse-to-patient ratio of 411,131, reflecting a slight increase compared to 2018. Denmark's ratio for 2019 was 66,940, showing a modest rise from the previous year. Japan’s ratio in 2019 was 1,580,040, maintaining its large workforce relative to its population. New Zealand reported 54,512 in 2019, indicating a consistent level of nursing resources compared to the previous year. The United States had a ratio of 3,930,890 in 2019, continuing to reflect a large healthcare workforce.
+        </p>
+        <p id="d3" style="display: none;">
+            In 2020, Canada’s value increased to 417,893, demonstrating an upward trend in nursing resources. Denmark’s ratio rose to 67,830, indicating a small but steady increase. Japan saw its ratio grow to 1,621,095, continuing its trend of a large healthcare workforce. New Zealand's ratio for 2020 was 57,677, showing an increase in nursing resources during that year. The United States reported a value of 3,923,300, which was a slight decrease compared to 2019 but still maintaining a high workforce level.
+        </p>
+        <p id="d4" style="display: none;">
+            In 2021, Canada’s ratio reached 427,390, marking the highest value in the available data. Denmark reported 66,365 for 2021, a slight decrease compared to 2020. Japan had 1,621,095 in 2021, maintaining its strong healthcare workforce. New Zealand reported 59,648, reflecting an increase in nursing resources. The United States had 3,975,160, showing a slight rise from the previous year.
+        </p>
+        <p id="d5" style="display: none;">
+            In 2022, New Zealand recorded a ratio of 62,162, its highest value in the available data. The United States had a ratio of 4,017,440, reflecting an increase in healthcare resources, and the other 3 countries showed 0 for that year.
+        </p>
+    </main>
+    <br>
+    <footer>
+        2024 Data Visualization Project | Created by Group 9
+    </footer>
+
+    <script src="donut.js"></script>
 </body>
 </html>
