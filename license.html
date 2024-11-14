@@ -254,10 +254,14 @@ button#pauseButton:hover {
            <br>
            <br>
            <br> 
-            <div class="controls">
-                <button id="playButton">Play</button>
-                <button id="pauseButton">Pause</button>
-            </div>
+          <div class="controls">
+            <select id="yearSelect">
+                <option value="" disabled selected>Select a year</option>
+                <!-- Year options will be populated dynamically -->
+            </select>
+            <button id="playButton">Play</button>
+            <button id="pauseButton">Pause</button>
+        </div>
         </div>
     <!-- D3.js library -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
